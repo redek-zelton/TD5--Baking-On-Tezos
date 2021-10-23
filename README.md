@@ -61,7 +61,14 @@ $tezos-client register key "#UsernameClient" as delegate
 ```bash
 tezos-baker run with local node "/home/.tezos-node" "#Baker"
 ```
+
+
 ## Register a second account, and delegate baking rights to the first account
+Follow this [link](https://opentezos.com/baking/delegating/)
+```bash
+$tezos-client set delegate for "#NewBaker" to "#Baker"
+```
+
 ## Run Tezos Endorser
 ## Run Tezos Accuser
 ## Turn all 3 Softwares into Services
