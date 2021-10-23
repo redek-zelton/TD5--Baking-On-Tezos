@@ -57,24 +57,35 @@ $tezos-client register key "#UsernameClient" as delegate
 ```
 
 
-## Run Tezos Baker
+## Run Tezos Baker :speech_balloon:
 ```bash
 tezos-baker run with local node "/home/.tezos-node" "#Baker"
 ```
 
 
-## Register a second account, and delegate baking rights to the first account
+## Register a second account, and delegate baking rights to the first account :speech_balloon:
 Follow this [link](https://opentezos.com/baking/delegating/)
 ```bash
 $tezos-client set delegate for "#NewBaker" to "#Baker"
 ```
 
-## Run Tezos Endorser
-## Run Tezos Accuser
-## Turn all 3 Softwares into Services
+## Run Tezos Endorser :speech_balloon:
+```bash
+$tezos-endorser run "#Baker"
+```
 
+## Run Tezos Accuser :speech_balloon:
+```bash
+$tezos-accuser run
+```
 
+## Turn all 3 Softwares into Services :speech_balloon:
+Use systemctl [enable,start,restart (if fail),status, stop(kill process) ]
 
+## Documentation
+[Tezos Gitlab p1](https://tezos.gitlab.io/index.html)
+[Tezos Gitlab p2](https://gitlab.com/tezos/tezos)
+[How To](https://gist.github.com/dakk/bdf6efe42ae920acc660b20080a506dd)
 
 
 
